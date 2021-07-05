@@ -1,0 +1,65 @@
+<% layout('layouts/boilerplate') %>
+	<link rel="stylesheet" href="/stylesheets/home.css">
+
+	<header id="masthead" class="site-header jumbotron jumbotron-fluid" role="banner">
+		<div class="d-flex flex-column justify-content-center align-items-center">
+			<h1 class="title">Smita's Eats</h1>
+			<h2 class="tagline"><em>Come cook with me!</em></h2>
+		</div>
+	</header>
+
+	<div id="content" class="container">
+		<div class="row justify-content-center justify-content-md-start">
+			<div class="site-main order-2 order-md-1 col-11 col-md-8">
+				<div class="d-flex flex-column align-items-start">
+					<div class="row mb-1 mb-md-2">
+						<h1>Our Latest Recipes</h1>
+					</div>
+					<%DISPLAY=5%>
+						<%START=recipes.length - 1%>
+							<%END=recipes.length - DISPLAY%>
+								<% for(var i=START; i>= END; i--) { %>
+									<div class="row mb-1">
+										<div class="card">
+											<img class="card-img-top" src="/imgs/recipes/<%= recipes[i].picture %>"
+												alt="Card image cap">
+											<div class="card-body">
+												<h5 class="card-title">
+													<%= recipes[i].name %>
+												</h5>
+												<p class="card-text">
+													<%= recipes[i].description %>
+												</p>
+												<a href="/recipes/<%= recipes[i].id %>" class="btn btn-primary">See full
+													recipe</a>
+											</div>
+										</div>
+									</div>
+									<% } %>
+				</div>
+			</div>
+			<div class="sidebar order-1 order-md-2 col-12 col-md-4 mb-3">
+				<aside id="sidebar">
+					<div class="embed-responsive embed-responsive-16by9 border-black-1 rounded mb-1 mb-md-2">
+						<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/tCgRD1Wf1vU"
+							frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen></iframe>
+					</div>
+					<p>
+						Welcome to Smita's Eats! In this lively series, I share the Indian recipes my family has
+						enjoyed for
+						years. Many of the recipes are Gujarati and are not commonly found in mainstream Indian
+						restaurants.
+						Each episode features me making a dish from easy-to-find vegetarian ingredients. Rarely
+						am I alone
+						in the kitchen, as I like having family and friends stop by to share in what I've made.
+						Like my
+						guests, I hope you will enjoy (and devour) my recipes too!
+					</p>
+				</aside>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="/scripts/home.js"></script>

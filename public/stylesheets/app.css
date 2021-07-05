@@ -1,0 +1,109 @@
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+footer {
+  font-family: 'Permanent Marker', cursive;
+  font-size: .9rem;
+}
+
+h1,h2 {
+  font-family: 'Anton', sans-serif;
+}
+
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+a:link {
+  text-decoration: none;
+}
+
+#mainNavbar {
+  font-family: 'Baloo Tammudu 2', cursive;
+  font-size: 1.5rem;
+}
+
+.border-black-1 {
+   border: solid 1px black;
+}
+
+/*** hover effects ***/
+/* grow */
+.hover-grow:hover {
+  transform: scale(1.2);
+  transition: all ease 500ms;
+}
+
+/* border grow */
+.hover-border-grow {
+  border: solid 1px #8e9eab;
+  transition: border-width 0.1s linear;
+}
+
+.hover-border-grow:hover  { 
+  border-width: 5px; 
+}
+
+/* wiggle */
+.hover-wiggle:hover { 
+  animation: wiggle 90ms infinite;
+  animation-timing-function: linear;   
+}
+
+@keyframes wiggle {
+  0% { transform: translate(2px, 0); }
+  50% { transform: translate(-2px, 0); }
+  100% { transform: translate(2px, 0); }
+}
+
+/*** glow effect ***/
+.glow {
+  color: #fffff0;
+  text-align: center;
+  -webkit-animation: glow .9s ease-in-out infinite;
+  -moz-animation: glow .9s ease-in-out infinite;
+  animation: glow .9s ease-in-out infinite;
+}
+
+.glow-fadeOut {
+  color: #fffff0;
+  text-align: center;
+  -webkit-animation: glow-fadeOut .9s ease-in-out 1;
+  -moz-animation: glow-fadeOut .9s ease-in-out 1;
+  animation: glow-fadeOut .9s ease-in-out 1;
+}
+
+@-webkit-keyframes glow {
+ from {
+    text-shadow: 0 0 10px #ffa751, 0 0 20px #ffa751, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  50% {
+    text-shadow: 0 0 20px #ffa751, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;    
+  }
+  to {
+    text-shadow: 0 0 10px #ffa751, 0 0 20px #ffa751, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+}
+
+@-webkit-keyframes glow-fadeOut {
+  from {
+    text-shadow: 0 0 10px #ffa751, 0 0 20px #ffa751, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  50% {
+    text-shadow: 0 0 20px #ffa751, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;    
+  }
+  80% {
+    text-shadow: 0 0 10px #ffa751, 0 0 20px #ffa751, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 2px 2px #ffa751;
+  }
+}

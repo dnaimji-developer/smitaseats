@@ -1,0 +1,29 @@
+@import url("app.css");
+
+body {
+    background: #E44D26;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #F16529, #E44D26);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #F16529, #E44D26); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Dosis', sans-serif;
+}
+
+.jumbotron {
+    background-image: url("/imgs/cover_banner.jpg");
+  	background-size: cover; 
+    height: 100%;
+    width: 100%;
+    margin-top: 90px;
+    color: #fffff0;
+    text-shadow: 2px 2px #ffa751;
+}
+
+.title {
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: 8vw;
+    letter-spacing: 1px;
+}
+
+.tagline {
+    font-size: 5vw;
+    font-family: 'Caveat', cursive;
+}

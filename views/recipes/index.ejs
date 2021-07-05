@@ -1,0 +1,46 @@
+<% layout('layouts/boilerplate') %>
+	<!-- CSS -->
+	<link rel="stylesheet" href="/stylesheets/recipes.css">
+
+	<div id="content" class="container">
+		<div class="d-flex flex-column align-items-center">
+			<div class="container">
+				<% if(success && success.length> 0 ){ %>
+					<div class="alert alert-success" role="alert">
+						<%= success %>
+					</div>
+					<% } %>
+						<% if(error && error.length> 0 ){ %>
+							<div class="alert alert-danger" role="alert">
+								<%= error %>
+							</div>
+							<% } %>
+			</div>
+			<div class="row my-2">
+				<h1>Recipes</h1>
+			</div>
+			<div class="row justify-content-center justify-content-sm-start">
+				<%LENGTH=recipes.length - 1%>
+					<%START=recipes.length - 1%>
+						<%END=0%>
+							<% for(var i=START; i>= END; i--) { %>
+								<div class="card col-10 col-sm-4 my-1 p-1">
+									<img class="card-img-top img-thumbnail p-0 col"
+										src="/imgs/recipes/<%= recipes[i].picture %>" alt="Card image cap">
+									<div class="card-body">
+										<h5 class="card-title">
+											<%= recipes[i].name %>
+										</h5>
+										<!-- <p class="card-text"><%= recipes[i].description %></p> -->
+										<a href="/recipes/<%= recipes[i].id %>" class="btn btn-primary">See full
+											recipe</a>
+									</div>
+								</div>
+								<% if ((LENGTH - i) % 3==2) { %>
+									<!-- Force next columns to break to new line -->
+									<div class="w-100"></div>
+									<% } %>
+										<% } %>
+			</div>
+		</div>
+	</div>
